@@ -1,9 +1,23 @@
 import './App.css'
-
-function App() {
+import UseReducerComponent from './hooks/useReducer';
+const styles = {
+  div: {
+    margin: '0 auto',
+    width: '1000px',
+    height: '100vh'
+  },
+  h: {
+    textAlign: 'center',
+    margin: '50px auto 40px auto'
+  }
+}
+const App = () => {
   return (
-    <h1>useReducePlus</h1>
+    <div style={styles.div}>
+      <h1 style={styles.h}>useReducePlus</h1>
+      <UseReducerComponent />
+    </div>
   )
 }
 
-export default App;
+export default App

@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useState } from 'react'
+import useFetch from './userHook'
 const [nameArr, surNameArr] = ['Uladzimir', 'React']
 const Call = () => {
+  const data = useFetch('https://jsonplaceholder.typicode.com/users')
+  const insert = data ? 'WELL' : null
   const [name, setName] = useState('')
   const [surname, setSurname] = useState('')
   const [counter, setCounter] = useState(0)
@@ -36,7 +39,8 @@ const Call = () => {
         setTheme('orange')
         setCounter(0)
       }}>Reset and add dark theme</button>
-</div>
+      <div style={{textAlign: 'center', backgroundColor: 'lightgreen'}}>{insert}</div>
+  </div>
   )
 }
 export default Call

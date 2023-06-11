@@ -1,6 +1,7 @@
 import './App.css'
 import UseReducerComponent from './hooks/useReducer'
 import Memo from './hooks/useMemo'
+import Call from './hooks/useCallback'
 const styles = {
   div: {
     margin: '0 auto',
@@ -17,7 +18,8 @@ const App = () => {
     <div style={styles.div}>
       <h1 style={styles.h}>useReducePlus</h1>
       <UseReducerComponent />
-      <Memo/>
+      <Memo />
+      <Call/>
     </div>
   )
 }
